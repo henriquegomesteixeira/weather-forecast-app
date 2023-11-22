@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/styles.css">
+  <link rel="stylesheet" href="./src/styles/loader.css">
+  <link rel="icon" type="image/png" href="./img/cloud.png">
+  <script src="https://kit.fontawesome.com/4397a41ee3.js" crossorigin="anonymous"></script>
+  <script src="./src/scripts.js" defer></script>
+  <title>Open Weather</title>
+</head>
+
+<body>
+  <div id="loadingScreen">
+    <div class="container">
+      <div class="cloud front">
+        <span class="left-front"></span>
+        <span class="right-front"></span>
+      </div>
+      <span class="sun sunshine"></span>
+      <span class="sun"></span>
+      <div class="cloud back">
+        <span class="left-back"></span>
+        <span class="right-back"></span>
+      </div>
+    </div>
+  </div>
+  <div id="weatherContainer">
+    <h1 id="week"></h1>
+    <p id="date"></p>
+    <div id="location">
+      <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
+      <p id="cityName"></p>
+    </div>
+    <div>
+      <i class="figure" style="color: #ffffff;"></i>
+      <h1 id="temp"></h1>
+      <h2 id="description"></h2>
+    </div>
+  </div>
+  <div id="search2">
+    <input id="cityInput" type="text" placeholder="Pesquisar lugares...">
+    <button id="searchButton">
+      <i id="searchButton" class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+    </button>
+  </div>
+  <div id="weatherDetails">
+    <div class="information">
+      <h2>PRESSÃO</h2>
+      <p id="pressure">0 hPa</p>
+    </div>
+    <div class="information">
+      <h2>UMIDADE</h2>
+      <p id="humidity">0%</p>
+    </div>
+    <div class="information">
+      <h2>VENTO</h2>
+      <p id="wind">0 km/h</p>
+    </div>
+    <div class="weekContainer">
+      <div class="weekBox">
+        <i class="icon" style="color: #ffffff;"></i>
+        <p class="weekDay"></p>
+        <p class="weekTemp"></p>
+      </div>
+      <div class="weekBox">
+        <i class="icon" style="color: #ffffff;"></i>
+        <p class="weekDay"></p>
+        <p class="weekTemp"></p>
+      </div>
+      <div class="weekBox">
+        <i class="icon" style="color: #ffffff;"></i>
+        <p class="weekDay"></p>
+        <p class="weekTemp"></p>
+      </div>
+      <div class="weekBox">
+        <i class="icon" style="color: #ffffff;"></i>
+        <p class="weekDay"></p>
+        <p class="weekTemp"></p>
+      </div>
+    </div>
+    <div id="search">
+      <input id="cityInput input" type="text" placeholder="Pesquisar lugares...">
+      <button id="searchButton">
+        <i id="searchButton" class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

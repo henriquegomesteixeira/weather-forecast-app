@@ -1,0 +1,8 @@
+{
+  "extends": "trybe-fundamentals",
+  "rules": {
+    "max-len": "off",
+    "max-lines-per-function": "off",
+    "no-param-reassign": "off"
+  }
+}
