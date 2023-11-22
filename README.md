@@ -4,7 +4,7 @@ Um aplicativo simples para visualizar o clima atual e a previsão do tempo para 
 
 ## Deploy e Imagens
 
-O projeto está disponível para acesso no link: [Weather Forecast App](https://open-weather-nine.vercel.app/)
+O projeto está disponível para acesso no link: [Weather Forecast App](https://weather-forecast-app-henrique-gomes.vercel.app/)
 
 <br />
 
@@ -51,4 +51,4 @@ O projeto está disponível para acesso no link: [Weather Forecast App](https://
 
 ## Autor  🧑‍💻
 
-Henrique Gomes Teixeira - [Weather Forecast App](https://open-weather-nine.vercel.app/) - henriquegomesteixeiradev@gmail.com
+Henrique Gomes Teixeira - [Weather Forecast App](https://weather-forecast-app-henrique-gomes.vercel.app/) - henriquegomesteixeiradev@gmail.com
