@@ -4,7 +4,7 @@ Um aplicativo simples para visualizar o clima atual e a previsão do tempo para 
 
 ## Deploy e Imagens
 
-O projeto está disponível para acesso no link: [Trybe Wallet](https://trybe-wallet-smoky.vercel.app/)
+O projeto está disponível para acesso no link: [Weather Forecast App](https://open-weather-nine.vercel.app/)
 
 <br />
 
