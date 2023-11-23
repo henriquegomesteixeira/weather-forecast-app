@@ -127,24 +127,29 @@ const updateWeekDays = () => {
 
 // Função para exibir os dados do clima
 const showWeatherData = async (city) => {
+  // Exibe a tela de carregamento
   showLoadingScreen();
+  // Obtém os dados do clima atual usando a função getWeatherData
   const data = await getWeatherData(city);
-
+  
+  // Esconde a tela de carregamento após os dados serem carregados
   setTimeout(() => {
     hideLoadingScreen();
   }, 2300);
 
+  // Exibe um alerta de erro caso o nome da cidade não seja encontrado
   if (!data || data.cod === '404') {
     alert('Cidade não encontrada.');
     return;
   }
-
+  // Atualiza as informações na página com os dados obtidos
   updateBackgroundImage(city);
   updateCurrentWeatherData(data);
   await updateForecastData(city);
   updateWeekDays();
 };
 
+// Eventos para acionar a exibição dos dados climáticos
 // Evento para Desktop - atualizar os dados do clima ao clicar no botão
 searchButton1.addEventListener('click', (e) => {
   e.preventDefault();
@@ -179,6 +184,7 @@ searchButton2.addEventListener('click', (e) => {
 
 // Atualiza os dados do clima ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
+  // Obtém a data atual e a formata para exibição
   const today = new Date();
 
   // Atualiza o dia da semana
@@ -191,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const options2 = { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Sao_Paulo' };
   const formattedDate = today.toLocaleDateString('pt-BR', options2);
   date.textContent = formattedDate;
-
+  
+  // Chama a função showWeatherData com uma cidade padrão (São Paulo) ao carregar a página
   showWeatherData('São Paulo');
 });
