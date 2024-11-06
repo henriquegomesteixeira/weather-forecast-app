@@ -1,9 +1,5 @@
-import dotenv from 'dotenv';
-
-dotenv.config();
-
 // Constantes para as chaves da API e URL base
-const apiKey = process.env.WEATHER_API_KEY;
+const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
 
 // Elementos do DOM
 const cityInput1 = document.querySelector('#search input');
@@ -53,7 +49,7 @@ const hideLoadingScreen = () => {
 
 // Função para atualizar a imagem de fundo
 const updateBackgroundImage = async (city) => {
-  const accessKey = process.env.PIXABAY_API_KEY;
+  const accessKey = process.env.NEXT_PUBLIC_PIXABAY_API_KEY;
   const apiUnsplash = `https://pixabay.com/api/?key=${accessKey}&q=${encodeURIComponent(city)}&image_type=photo`;
 
   try {
