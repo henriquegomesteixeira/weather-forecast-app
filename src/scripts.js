@@ -1,4 +1,6 @@
-require('dotenv').config();
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // Constantes para as chaves da API e URL base
 const apiKey = process.env.WEATHER_API_KEY;
