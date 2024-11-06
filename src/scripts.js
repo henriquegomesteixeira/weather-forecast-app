@@ -1,5 +1,5 @@
 // Constantes para as chaves da API e URL base
-const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
+const apiKey = 'e8da0a9044b6c7188fa6e0fc55909889';
 
 // Elementos do DOM
 const cityInput1 = document.querySelector('#search input');
@@ -49,7 +49,7 @@ const hideLoadingScreen = () => {
 
 // Função para atualizar a imagem de fundo
 const updateBackgroundImage = async (city) => {
-  const accessKey = process.env.NEXT_PUBLIC_PIXABAY_API_KEY;
+  const accessKey = '46920379-998be90b3e32ebf9d3ce1d2a2';
   const apiUnsplash = `https://pixabay.com/api/?key=${accessKey}&q=${encodeURIComponent(city)}&image_type=photo`;
 
   try {
