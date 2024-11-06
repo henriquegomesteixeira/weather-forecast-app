@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "eslint-config-trybe-fundamentals": "^1.1.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
   }
 }

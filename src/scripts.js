@@ -1,5 +1,7 @@
+require('dotenv').config();
+
 // Constantes para as chaves da API e URL base
-const apiKey = 'e8da0a9044b6c7188fa6e0fc55909889';
+const apiKey = process.env.WEATHER_API_KEY;
 
 // Elementos do DOM
 const cityInput1 = document.querySelector('#search input');
@@ -48,10 +50,22 @@ const hideLoadingScreen = () => {
 };
 
 // Função para atualizar a imagem de fundo
-const updateBackgroundImage = (city) => {
-  const apiUnsplash = 'https://source.unsplash.com/1600x900/?';
-  const formattedCity = encodeURIComponent(city);
-  weatherContainer.style.backgroundImage = `url(${apiUnsplash + formattedCity})`;
+const updateBackgroundImage = async (city) => {
+  const accessKey = process.env.PIXABAY_API_KEY;
+  const apiUnsplash = `https://pixabay.com/api/?key=${accessKey}&q=${encodeURIComponent(city)}&image_type=photo`;
+
+  try {
+    const response = await fetch(apiUnsplash);
+    const data = await response.json();
+    console.log(data);
+    const randomIndex = Math.floor(Math.random() * data.hits.length);
+    console.log(randomIndex);
+    const imageUrl = data.hits[randomIndex].largeImageURL;
+
+    weatherContainer.style.backgroundImage = `url(${imageUrl})`;
+  } catch (error) {
+    console.error('Error fetching image:', error);
+  }
 };
 
 // Função para atualizar o ícone de acordo com o clima
